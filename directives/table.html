@@ -1,0 +1,39 @@
+<div id="amp-table">          
+    <h2 class="sub-header">New Page</h2>
+    <div class="panel panel-primary" id="line-chart">
+        <div class="panel-heading">
+            <h3 class="panel-title">Line Chart 1</h3>
+        </div>
+        <div class="panel-body">
+            <nvd3-line-chart
+                data="extraData"
+                showXAxis="true"
+                showYAxis="true"
+                tooltips="true"
+                interactive="true">
+            </nvd3-line-chart>
+        </div>
+    </div>
+
+    <div class="panel panel-primary" id="table-responsive">
+        <div class="panel-heading">
+            <h3 class="pannel-title">Table</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Machine ID</th>
+                        <th>Time Stamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="machine in data" ng-click="click(machine.id)">
+                        <td>{{ machine.id }}</td>
+                        <td >{{ machine.time}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
